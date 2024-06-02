@@ -1,36 +1,53 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import image1 from '../../../../public/assets/home/01.jpg'
-import image2 from '../../../../public/assets/home/02.jpg'
-import image3 from '../../../../public/assets/home/03.png'
-import image4 from '../../../../public/assets/home/04.jpg'
-import image5 from '../../../../public/assets/home/05.png'
-import image6 from '../../../../public/assets/home/06.png'
+import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const Banner = () => {
     return (
-        <Carousel>
-            <div>
-                <img src={image1} />
-            </div>
-            <div>
-                <img src={image2} />
-                
-            </div>
-            <div>
-                <img src={image3} />
-            </div>
-            <div>
-                <img src={image4} />
-            </div>
-            <div>
-                <img src={image5} />
-            </div>
-            <div>
-                <img src={image6} />
 
-            </div>
-        </Carousel>
+        <Swiper
+            pagination={{
+                type: 'progressbar',
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+        >
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/BHk0x86/josiah-weiss-8sj-Bz-L1-Iy-Mo-unsplash-1.jpg`} />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/4P4ydcW/lina-verovaya-GQQ6-BRJxys-U-unsplash-1.jpg`} />
+
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/VwtJRcj/omar-roque-z5ncx9p6-Av-M-unsplash.jpg`} />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/rsWVCr3/safar-safarov-0-NGnnp-FVzt-U-unsplash.jpg`} />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/2vskcH9/ross-sneddon-io-TLGAz-Arg0-unsplash.jpg`} />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div>
+                    <img src={`https://i.ibb.co/0ht0FVb/rich-smith-Mvmpjc-YC8dw-unsplash.jpg`} />
+
+                </div>
+            </SwiperSlide>
+        </Swiper>
     );
 };
 
