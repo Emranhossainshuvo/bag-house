@@ -23,8 +23,8 @@ const Navbar = () => {
 
     const navOptions = <>
 
-        <li><Link to="/menu">Our Menu</Link></li>
-        <li><Link to="/order/salad">Order food</Link></li>
+        <li><Link to="/menu">Category</Link></li>
+        <li><Link to="/order/salad">All bags</Link></li>
         <li>
             <Link to="/dashboard/cart">
                 <button className="btn">
@@ -68,7 +68,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link to="/"><a className="btn btn-ghost normal-case text-xl">Bistro Boss</a></Link>
+                    <Link to="/"><a className="btn btn-ghost normal-case text-xl">Bag House</a></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
