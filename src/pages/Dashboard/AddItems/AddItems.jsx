@@ -47,11 +47,11 @@ const AddItems = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control w-full my-6">
                         <label className="label">
-                            <span className="label-text">Recipe Name*</span>
+                            <span className="label-text">Bag Name*</span>
                         </label>
                         <input
                             type="text"
-                            placeholder="Recipe name"
+                            placeholder="Bag name"
                             {...register('name', {required: true})}
                             className="input input-bordered w-full"
                         />
@@ -64,11 +64,11 @@ const AddItems = () => {
                             </label>
                             <select defaultValue="default" {...register('category', {required: true})} className="select select-bordered w-full">
                                 <option disabled value="default">Select a category</option>
-                                <option value="salad">Salad</option>
-                                <option value="pizza">Pizza</option>
-                                <option value="soup">Soup</option>
-                                <option value="drinks">Drinks</option>
-                                <option value="desserts">Desserts</option>
+                                <option value="salad">Travel bag</option>
+                                <option value="pizza">Laptop bag</option>
+                                <option value="soup">School bag</option>
+                                <option value="drinks">Sports bag</option>
+                                <option value="desserts">Everyday bag</option>
 
                             </select>
                         </div>
