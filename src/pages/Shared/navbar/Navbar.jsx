@@ -9,9 +9,9 @@ import useAdmin from "../../../hooks/useAdmin";
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
-    const [isAdmin] = useAdmin(); 
+    const [isAdmin] = useAdmin();
 
-    const [cart] = useCart(); 
+    const [cart] = useCart();
 
     const handleLogOut = () => {
         logOut()
@@ -25,14 +25,8 @@ const Navbar = () => {
 
         <li><Link to="/menu">Category</Link></li>
         <li><Link to="/order/salad">All bags</Link></li>
-        <li>
-            <Link to="/dashboard/cart">
-                <button className="btn">
-                    <HiMiniShoppingCart className="mr-1" />  
-                    <div className="badge badge-secondary">+{cart.length}</div>
-                </button>
-            </Link>
-        </li>
+        <li><Link>About us</Link></li>
+        <li><Link>Contact us</Link></li>
         {
             user ?
                 <>
@@ -78,7 +72,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to="/dashboard/cart">
+                        <button className="flex justify-between items-center hover:btn">
+                            <HiMiniShoppingCart className="mr-1" />
+                            <div className="badge badge-secondary">+{cart.length}</div>
+                        </button>
+                    </Link>
+
                 </div>
             </div>
         </>
