@@ -12,7 +12,7 @@ const PopularManu = () => {
     return (
         <section className="mb-12">
             <SectionTitles
-                heading="From Our Manu"
+                heading="From Our Shop"
                 subHeading="Popular Items"
             >
 
